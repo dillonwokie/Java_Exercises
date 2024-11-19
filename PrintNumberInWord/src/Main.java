@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int number = 1001;
+        int number = 100;
         System.out.println(numberToWord(number));
     }
 
@@ -8,14 +8,18 @@ public class Main {
         for (int i = 0; i < values.length; i++) {
             if (num >= values[i]) {
                 int quotient = num / values[i]; // Divide to handle larger groups
+                System.out.println(quotient);
                 int remainder = num % values[i]; // Find the leftover number
+                System.out.println(remainder);
 
                 // Recursive call for larger parts
                 String result = "";
-                if (values[i] >= 100) { // Handle "hundred" and higher
+                if (values[i] >= 100) { // Handle one hundred and higher
                     result = numberToWordRec(quotient, values, words) + " " + words[i];
+                    System.out.println("greater 100: " + result);
                 } else {
                     result = words[i];
+                    System.out.println("less 100: " + result);
                 }
 
                 // Append the remainder recursively if it's non-zero
