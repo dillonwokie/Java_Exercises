@@ -20,7 +20,7 @@ public class Main {
     int sumRunningInt(int lowerBound, int upperBound) {
         int sum = 0;
         for (int i = lowerBound; i <= upperBound; i++) {
-            sum += i;
+            sum += lowerBound++;
         }
         return sum;
     }
