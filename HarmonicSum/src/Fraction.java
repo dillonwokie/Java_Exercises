@@ -1,6 +1,6 @@
 public class Fraction {
-    int numerator;
-    int denominator;
+    private int numerator;
+    private int denominator;
 
     public Fraction(int numerator, int denominator) {
         if (denominator == 0) {
@@ -9,6 +9,22 @@ public class Fraction {
         this.numerator = numerator;
         this.denominator = denominator;
         simplify();
+    }
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    public void setDenominator(int denominator) {
+        this.denominator = denominator;
     }
 
     // Method to simplify fraction
@@ -26,7 +42,7 @@ public class Fraction {
     }
 
     // Method to obtain GCD from Euclidean Algorithm
-    private int gcd(int a, int b) {
+    public int gcd(int a, int b) {
         if (b == 0) {
             return Math.abs(a);
         }
