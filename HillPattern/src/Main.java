@@ -59,7 +59,7 @@ public class Main {
         int numRowsC = 2 * numRows - 1;
         for (int row = 1; row <= numRows; row++) {
             for (int col = 1; col <= numRowsC; col++) {
-                if (col >= numRows - row + 1 && col <= numRows + row - 1) {
+                if (row >= col - numRowsB + 1 && row + col >= numRowsB + 1) {
                     System.out.print("# ");
                 } else {
                     System.out.print("  ");
@@ -69,7 +69,7 @@ public class Main {
         }
         for (int row = numRows - 1; row >= 1; row--) {
             for (int col = 1; col <= numRowsC; col++) {
-                if (col >= numRows - row + 1 && col <= numRows + row - 1) {
+                if (row >= col - numRowsB + 1 && row + col >= numRowsB + 1) {
                     System.out.print("# ");
                 } else {
                     System.out.print("  ");
@@ -78,6 +78,32 @@ public class Main {
             System.out.println();
         }
         System.out.println();
+
+        // Pattern D
+        System.out.println("Pattern D: ");
+        int numRowsD = 2 * numRows - 1;
+        for (int row = 1; row <= numRows ; row++) {
+            for (int col = 1; col <= numRowsD; col++) {
+                if (row >= col - numRowsB + 2 && row + col >= numRowsB + 2) {
+                    System.out.print("  ");
+                } else {
+                    System.out.print("# ");
+                }
+            }
+            System.out.println();
+        }
+        for (int row = numRows - 1; row >= 1; row--) {
+            for (int col = 1; col <= numRowsD; col++) {
+                if (row >= col - numRowsB + 2 && row + col >= numRowsB + 2) {
+                    System.out.print("  ");
+                } else {
+                    System.out.print("# ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+
 
     }
 }
