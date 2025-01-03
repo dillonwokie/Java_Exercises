@@ -10,7 +10,6 @@ public class Main {
         return false;
     }
 
-
     public static void main(String[] args) {
         // Track total tests and passed tests for summary
         int totalTests = 0;
