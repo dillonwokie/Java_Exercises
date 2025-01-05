@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
 
     static boolean equals(int[] array1, int[] array2) {
@@ -20,8 +18,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
         int[] arr1 = {1, 2, 3, 4, 5};
         int[] arr2 = {1, 2, 3, 4, 5};
         int[] arr3 = {1, 1, 2, 3, 4};
